@@ -1,0 +1,92 @@
+Vector Scaling
+
+- can be used for character movement and controlling size of elements
+- keeping speed separate from direction allows you to increase/decrease as gameplay requires
+
+2v = (2 * v.x, 2 * v.y)
+
+ex: (3, 4)
+
+2v = 
+(6, 8)
+
+
+Scalar Value 
+- scales magnitude (vector by number)
+- direction preserved
+- normalize(v) == normalize(2v)
+
+
+Hadamard Product
+- multiply 2 vectors (not as common)
+- might not preserve direction
+- could be used to stretch shapes and models (multiply vec2 by (1, 2) x value stays the same but y is 
+  disproportionally changed)
+- could be used to add a color tint (rgb could be multiplied by (1, 0, 0 ) to add a red tint)
+
+vector scaling allows you to:
+- scale object size
+- deformations
+- movement calculations
+
+2 ways to do this:
+- scale by magnitude -> scalar value
+  -single number, preserves direction (scaling by negative will change direction, -1 flips direction)
+- components -> element wise
+  - scaling along each axis, potentially non uniform
+
+
+Homework
+1. When you multiply a vector with a scalar value, does the resulting vector change direction, magnitude, or both?
+  magnitude, if negative will be both
+
+2. Assume you have a direction vector V, how could you use vector scaling to ensure consistent movement in that direction every frame?
+  can scale vector v by time elapsed since last frame, v * speed * timeElapsed
+
+3. Given 2 colours composed of RGB values, colour C and a tint colour T, how would you tint C by T?
+  multiple c by t
+
+4. Given a colour C composed of RGB values, and a scalar value of 0.5, what would happen if we multiplied them together? What is the effect on the colour?
+  the color will get darker
+
+5. What if we did the reverse, and divided by 0.5 instead? What is the effect on the colour?
+  the color will get brighter
+
+6. How could I scale a model’s size uniformly using vector scaling?
+  multiply each vertex value by the same value
+
+7. What is element-wise multiplication of vectors called?
+  Hadamard Product
+
+8. What is element-wise multiplication of vectors useful for? Give some examples.
+  deformation and color tinting
+
+9. How would you flip the direction of a vector using vector scaling?
+  multiply the vector by -1
+
+10. Given V = (3, 4), S = 4, what is SV?
+  (12, 16)
+
+11. Given V = (1, 2), S = -1.5, what is SV?
+  (-1.5, -3)
+
+12. Given V = (1, 2, 3), S = 5, what is SV?
+  (5, 10, 15)
+
+13. Given V = (3, 4), S = (1, 0), what is S∘V?
+  (3, 0)
+
+14. Given V = (5, 6), S = (5, 5), what is S∘V?
+  (25, 30)
+
+15. Given V = (1, 2, 3), S = (1, -1, 1), what is S∘V?
+  (1, -2, 3)
+
+16. Is scalar vector multiplication commutative?
+  yes
+
+17. Is it associative?
+  yes
+
+18. How about element-wise multiplication?
+  associative and commutative

@@ -1,0 +1,50 @@
+Normalized Vectors
+
+- points represent locations in space
+- vectors represent direction and magnitude
+- a normalized vetor's length is exactly 1 and the direction stays the same
+
+- useful in game dev for positions updates with speed and direction, physics simulations, shaders, etc
+- make sure calculations fall within specific range
+
+ex:
+v = (2, 1)
+
+length = sqrt(2^2 + 1^2)
+length = 2.236...
+
+v / length
+(2, 1) / 2.236
+= (0.894, 0.447)
+
+can verify (should equal 1.0 to be normalized): 
+length = sqrt(0.894^2 + 0.447^2) 
+
+////////
+Homework:
+1. Normalize the following vector v = (3,4)
+(0.6, 0.8)
+
+2. Normalize the following vector v = (-1,-1)
+(-0.7, -0.7)
+
+3. Normalize the following vector v = (0.5,0.5)
+(0.7, 0.7)
+
+4. Define a normalized or unit vector in your own words.
+A normalized vector is a vector scaled to have a length of 1
+
+5. Why is the length of a normalized vector always equal to 1?
+it's easier to perform calculations
+
+6. If a vector lies on the unit circle in a 2D grid, what can you infer about its magnitude?
+The unit circle has a radius of 1, thus you can infer that the vector lies on the unit circle and is a unit vector, ie.has length1
+
+7. If you have vectors v1 = (0.75,0.25) and v2 = (3,1), will the normalized vectors be the same?
+0.79 length 1st
+(0.94, 0.31)
+3.16 length 2nd
+yes theyre the same
+
+8. How do you denote a vector as unit length?
+you put a ^ symbol over it

@@ -1,3 +1,96 @@
 Dot Product
 
 - shows up in movement and lighting
+
+takes 2 vectors, produces a scalar
+  - also called scalar product, scalar projection
+
+similarity of 2 vectors
+  - how closely they align in direction
+
+how to compute:
+  dot(a, b) = value
+  dot(a, b) = a.x * b.x + a.y * b.y
+
+a = (1, 2), b = (1, 3)
+  dot(a, b) = 1 * 1 + 2 * 3 = 7
+
+also can be magnitude (length) of a * magnitude of b * cos(angle between a and b)
+  related to the cosine of the angle between the 2 vectors, scaled by the magnitude of both
+
+orthogonality is vectors that are perpendicular, 
+  dot product is 0 and the vectors have no components in the same direction
+
+vectors should be normalized to get dot product, direction vectors are generally normalized
+
+for dot product 1 is same direction, -1 is opposite direction, and 0 is perpendicular
+
+could be used to see if player is within enemy field of view 
+  if enemy fov is 60deg, it's 30 on each side. so do cos(angle between where they're looking and player position), 
+  if it's between 1 and cos(30) then the enemy can see the player
+
+generally used to 
+  relate the angle between 2 vectors and 
+  project 1 vector onto another
+
+
+Homework:
+
+Questions
+
+1. Given v1 = (1, 0) and v2 = (0, 1), what is v1 ⋅ v2
+  0
+
+2. Given v1 = (1, 2) and v2 = (2, 1), what is v1 ⋅ v2
+  4
+
+3. Given v1 = (1, 2) and v2 = (3, 4), what is v1 ⋅ v2
+  11
+
+4. Given v1 = (2, 3) and v2 = (-3, 2), what is v1 ⋅ v2
+  0
+
+5. Given v1 = (2, 3, 1) and v2 = (1, 1, 1), what is v1 ⋅ v2
+  6 
+
+6. The dot product is also known by what names?
+  scalar product, scalar projection
+
+7. Is the dot product associative? Show using any 2 vectors.
+  no
+
+8. Commutative? Again, show using any 2 vectors.
+  yes
+
+9. If v1 ⋅v2 = 0, what does this signify geometrically?
+  the vectors are perpendicular/orthogonal
+
+10. If v1 ⋅ v2 < 0, what does this signify geometrically?
+  the angle between the vectors is greater than 90deg
+
+11. As v1 ⋅ v2 approaches 1, what does this signify geometrically?
+  the angle is growing smaller
+
+12. Given v1 , and v2 , what is the possible range of values for v1 ⋅ v2 ? Why?
+  -1 to 1, they should be normalized
+
+13. How is the dot produced related to the angle between 2 unit vectors?
+  The dot product of 2 unit vectors is related to the cosine of the angle
+  between them.
+
+14. What is the relationship between  𝑣1 ⋅𝑣1 and v| 1 |?
+  The dot product of a vector with itself is equal to the square of the magnitude
+
+15. Given 2 vectors, 𝑣1 and 𝑣2 , how would you determine if they’re orthogonal?
+  if the dot product is 0
+
+16. How would you use the dot product to implement a "lock-on" targeting system?
+  So if you’re building a game and wanted to implement some sort of autolock
+  or “lock on” system, whereby your targeting cursor immediately latches onto nearby
+  targets, you could do something like this. You’d have your aiming direction, let’s call 
+  that 𝑎 , and the vectors from the player to each enemy, call those vectors i , then this
+  could be done by calculating the dot product between 𝑎 and i , filtering out anything
+  that didn’t meet some predetermined minimum threshold, and then simply choosing
+  the highest result. This would ensure that you’ve chosen the target nearest to the
+  current targeting direction, and your game logic could adjust the target direction to
+  exactly match.

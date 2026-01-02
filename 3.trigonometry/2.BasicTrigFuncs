@@ -1,0 +1,37 @@
+1. Define sine, cosine, and tangent in terms of a right-angled triangle.
+  a. In a right angled triangle, sin(θ) is the length of the opposite side divided by
+  the hypotenuse, cos(θ) is adjacent divided by hypotenuse, and tan(θ) is
+  opposite / adjacent.
+
+2. How are the sine and cosine values of an angle related to a point on the unit circle?
+  a. Generally, you’re looking to understand that a point P(x, y) on the unit circle,
+  corresponding to angle θ, has x = cos(θ) and y = sin(θ).
+
+3. Explain the relationship between sin(θ) and cos(θ).
+  a. They represent sides of the right angled triangle formed by the angle θ. If you
+  were to sketch the graphs of sin(θ) and cos(θ), you’d see that they make
+  similar graphs, just offset from one another. In fact, sin(θ) = cos(θ - π/2).
+
+4. Why do we often ignore the hypotenuse when talking about a unit circle?
+  a. The unit circle has a radius of 1, thus cos and sin of angles correspond
+  directly to the x and y coordinates of the point on the circle.
+
+5. Given a point (0.707, 0.707) on the unit circle for some θ, compute sin(θ) and cos(θ).
+  a. sin(θ) = 0.707, cos(θ) = 0.707
+
+6. Given a point (0.5, 0.866) on the unit circle for some θ, compute sin(θ) and cos(θ).
+  a. sin(θ) = 0.866, cos(θ) = 0.5
+
+7. Sketch the graph of sin(θ) and cos(θ) between θ = 0 and θ = 2π. How are they related?
+  a. The important thing here is to notice that these are essentially the same
+  graph, but just shifted. If you look at cos(θ), it’s the exact same as sin(θ) but
+  just shifted over. If you were to shift sin(θ) to the left by pi/2, they would
+  overlap exactly.
+
+8. What is cos(0), explain how you derived this from the unit circle.
+  a. So for θ = 0, the corresponding point on the circle is (1, 0), and thus cos(θ) = 1
+
+9. Explain why tan(θ) approaches infinity as θ approaches π/2.
+  a. Recall that tan(θ) = sin(θ) / cos(θ). As θ approaches π/2, cos(θ) approaches
+  0, and thus tan(θ) approaches infinity, since you’re dividing by a vanishingly
+  small number.

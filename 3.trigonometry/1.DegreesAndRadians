@@ -1,0 +1,18 @@
+Degrees describe an angle 0-360
+  can use a normalized unit circle
+
+Radians are the distance of 1 unit around the surface of the unit circle
+  the angle is 57.29 degrees roughly or 1 Radians
+
+a circle is 360 degrees or 2pi radians
+
+converting:
+  degrees to radians:
+    degrees * pi / 180
+  
+  radians to degrees:
+    radians * 180 / pi
+
+radians directly related to circumference of a circle
+  relate arc lengths and angles using unit circle
+  can help to make calculations easier, used in most math/3d/shader libraries

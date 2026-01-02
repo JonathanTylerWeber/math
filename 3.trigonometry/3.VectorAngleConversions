@@ -1,0 +1,57 @@
+1. Why is it important to be able to convert vectors to angles in game development?
+  a. Generally, being able to convert to angles can be important for doing things
+  like determining an object’s orientation or implementing things like steering
+  behaviours in a simple way.
+
+2. Explain the terms magnitude and direction in the context of vectors.
+  a. →
+  Magnitude refers to the length or size of a vector, and is often denoted as ‖ 𝑣
+  ‖.
+  Direction describes the orientation of the vector.
+
+3. What are polar coordinates, and how do they differ from Cartesian coordinates?
+  a. Polar coordinates (r, θ) represent points in space using their distance “r” from
+  the origin, and an angle θ with respect to the positive x-axis. Cartesian
+  coordinates define points based on their horizontal and vertical distance from
+  the origin.
+
+4. Convert (3, 4) from Cartesian coordinates to polar coordinates.
+  a. (5, 0.93 radians)
+
+5. Convert (-1, 3) from Cartesian coordinates to polar coordinates.
+  a. (3.16, 1.89 radians)
+
+6. Convert (3,
+  -2) from Cartesian coordinates to polar coordinates.
+  a. (3.6,
+  -0.59 radians)
+
+7. Convert (1, π/2) from polar coordinates to Cartesian coordinates.
+  a. (0, 1)
+
+8. Convert (1, 0) from polar coordinates to Cartesian coordinates.
+  a. (1, 0)
+
+9. Convert (5, π/4) from polar coordinates to Cartesian coordinates.
+  a. (3.53, 3.53)
+
+10. Why do acos and asin fail to determine angles uniquely?
+  a. Recall that cos(θ) can return the same value for 2 different angles. An easy
+  example is cos(π/4) and cos(-π/4), and thus cannot uniquely identify an angle
+  in the range [0, 2π]. The input to acos is restricted to work in the range [0, π].
+  The function asin has a similar limitation, for example, sin(π/4) sin(3π/4) are
+  the same, since asin is restricted to work in the range [-
+  π
+  2
+  π
+  , ].
+  2
+
+11. What function would you normally use instead?
+  a. atan2
+
+12. Describe how storing a player’s orientation in polar coordinates may be advantageous
+  over storing it as a vector in Cartesian coordinates.
+  a. Storing the player’s orientation in polar coordinates may simplify rotations, as
+  you can operate on the angle θ directly. Turning left or right is as simple as
+  adding or subtracting from θ. Additionally, smoothly blending between

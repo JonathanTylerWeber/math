@@ -1,7 +1,7 @@
 Normalized Vectors
 
 - points represent locations in space
-- vectors represent direction and magnitude
+- vectors represent direction and magnitude(length)
 - a normalized vetor's length is exactly 1 and the direction stays the same
 
 - useful in game dev for positions updates with speed and direction, physics simulations, shaders, etc

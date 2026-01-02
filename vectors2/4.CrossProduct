@@ -1,0 +1,81 @@
+cross product aka vector product
+
+when adding a 3rd dimension, the z axis positive can go towards you OR away from you
+
+in 3d the cross product takes two vectors that arent aligned (different directions), 
+  gives back vector that's perpendicular to both
+
+how to compute:
+  cross(a, b) = c
+  c = (
+    a.y * b.z - a.z * b.y
+    a.z * b.x - a.x * b.z
+    a.x * b.y - a.y * b.x
+  )
+
+a = (1, 0, 0), b = (0, 1, 0)
+  c = (
+    0 - 0,
+    0 - 0,
+    1 - 0
+  )
+  c = ( 0, 0, 1)
+
+most programs will have a cross product function, focus on what it gives you
+  - given v1 and v2, returns v3 whcih is orthogonal to both
+  - magnitude of v3 is the area of the parallelogram formed by v1 and v2
+
+can help generate face normals for geometry, normals are perpendicular to the mesh
+
+
+HOMEWORK
+
+1. Compute (1, 0, 0) × (0, 1, 0)
+  0 * 0 - 0 * 1 = 0
+  0 * 0 - 1 * 0 = 0
+  1 * 1 - 0 * 0 = 1
+  (0, 0, 1)
+
+2. Compute (2, 2, 2) × (0, 1, 0)
+  2 * 0 - 2 * 1 = -2
+  2 * 0 - 2 * 0 = 0
+  2 * 1 - 2 * 0 = 0
+  (-2, 0, 2)
+
+3. Compute (1, 2, 3) × (4, 5, 6)
+  2 * 6 - 3 * 5 = -3
+  3 * 4 - 1 * 6 = 6
+  1 * 5 - 2 * 4 = -3
+  (-3, 6, -3)
+
+4. Given a and b , explain the geometric meaning of a x b .
+  the cross product C  is a vector perpendicular to the plane formed by a and b. Additionally, C is orthogonal to both a and b.
+
+5. Given a and b, what does the magnitude of a × b represent?
+  represents the area of the parallelogram spanned by the vectors
+
+6. Given C = a × b , what happens if you switch the order of the arguments, ie. b × a?
+  The resulting vector would be -C, going in the opposite direction
+
+7. If a and b are parallel, what is a × b?
+   If they’re parallel, the result is the zero vector.
+
+8. if a × b = 0, what does this mean?
+  Either they’re parallel, or at least one of them is the zero vector
+
+9. What is the result of a × a?
+  The vectors are parallel, and thus the result is the zero vector.
+
+10. Suppose you have 3 points in space, P 1 , P 2 , P 3 . How could you use the cross product
+to find a normal to the plane that passes through these 3 points?
+  You could calculate 2 vectors from the 3 points, so V 1 = P 2 - P 1 , and V 2 = P 3 -
+  P 1 , and then calculate V 1 × V 2 . The result would be normal to the plane that passes
+  through those 3 points.
+
+11. How could you use the cross product to calculate the surface area of a triangle with 3
+vertices, A, B, and C?
+  This is extremely similar to the previous question, but uses a different
+  property of the cross product. To begin, you’d compute 2 vectors from the 3 points,
+  let’s say you calculate AB = B - A, and AC = C - A. Then N = AB × AC, and then ½ |N|
+  would be the area of the triangle, because the magnitude of N is equal to the area of
+  the parallelogram spanned by AB and AC.
